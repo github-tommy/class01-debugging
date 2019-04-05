@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+   
+
+// =====TO DISPLAY EACH VALUE/NUMBER IN MY ARRAY
+
+    debugger;
+    myArray = [13,25,10,43,435];
+    myArray.forEach(function(value) {
+      console.log(value);
+    });
+
+// =====TO ADD 15 TO EACH NUMBER IN MY ARRAY
+    
+    debugger;
+  
+    let newNumber =myArray.map(function(x) {
+      return x + 15;
+    });
+
+    console.log(`${newNumber} - these are new numbers - derived from old numbers plus 15`);
+
+ // =====TO CHECK IF EVERY NUMBER IN THE ARRAY UNDER 30 AND DECLARE IF TRUE OR FALSE
+
+    debugger;
+
+    let below30 = myArray.every(function(x) {
+      return x < 30;
+    })
+
+    console.log(`Is every number is less than 30? ${below30}`);
+
+ // =====TO CHECK IF EVERY NUMBER IN THE ARRAY UNDER 500 AND DECLARE IF TRUE OR FALSE
+
+    debugger;
+
+    let below500 = myArray.every(function(x) {
+      return x < 500;
+    });
+
+    console.log(`Is every numbers in the array less than 500? ${below500}`);
+
+// =====TO CREATE A NEW ARRAY WITH NUMBERS ABOVE 50
+
+    debugger;
+
+    let above50 = myArray.filter(function(x) {
+      return x > 50;
+    });
+
+    console.log(`To display any numbers in the array above 50: ${above50}`);
+
+// =======TO SUM UP THE TOTAL OF ALL NUMBERS IN THE ARRAY
+
+    debugger;
+
+    // let sum = 0;
+    // for(let index = 0; index < myArray.length + 1; index++){
+    //   sum = sum + myArray[index];
+    // }
+
+    // console.log("The total value of the array is " + sum);
+
+    let totalAmount = myArray.reduce(function(sum, x) {
+      return sum + x;
+    });
+
+    console.log(`The total of value of the array is ${totalAmount}`)
+
+  </script>
+</head>
+<body>
+<h1>Aaron Katz Class01 - Debugging</h1>
+</body>
+</html>
